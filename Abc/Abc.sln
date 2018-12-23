@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abc.MvcWebUI", "Abc.MvcWebUI\Abc.MvcWebUI.csproj", "{FD5D2EC8-8F80-4997-9DFF-735D0C07992E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD5D2EC8-8F80-4997-9DFF-735D0C07992E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD5D2EC8-8F80-4997-9DFF-735D0C07992E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD5D2EC8-8F80-4997-9DFF-735D0C07992E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD5D2EC8-8F80-4997-9DFF-735D0C07992E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBBE4B37-20E7-44F3-9699-65B20756F42E}
+	EndGlobalSection
+EndGlobal

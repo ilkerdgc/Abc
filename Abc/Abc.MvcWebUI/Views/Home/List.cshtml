@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Abc.MvcWebUI.Models.ProductModel>
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-md-3 mt-3">
+            @Html.Action("_GetCategories", "Home")
+        </div>
+        <div class="col-md-9">
+
+            @if (Model.Count() == 0)
+            {
+                <div class="alert alert-warning mt-3" role="alert">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    Bu kategoride bir ürün bulunamadı.
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning mt-3" role="alert">
+                    <i class="fa fa-check-square" aria-hidden="true"></i>
+                    <strong>@Model.Count() adet</strong> ürün bulundu.
+                </div>
+            }
+
+            @Html.Partial("_ProductList", Model)
+        </div>
+    </div>
+</div>

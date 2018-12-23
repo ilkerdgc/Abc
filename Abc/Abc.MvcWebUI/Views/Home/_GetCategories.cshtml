@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Abc.MvcWebUI.Entity.Category>
+
+@{
+    var selectedCategory = Url.RequestContext.RouteData.Values["id"]; // url deki id yi alıyoruz. bunu yapmamızın nedeni tıkladığımız kategori buton unu ayarlamak için
+}
+
+<ul class="list-group">
+        <a href="/Home/List" class="list-group-item">
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            Tüm Kategoriler
+        </a>
+
+    @foreach (var item in Model)
+    {
+        if (selectedCategory != null)
+        {
+            if (item.Id == int.Parse(selectedCategory.ToString())) // eğer sonuç true ise seçilen kategori ile route id si birbrine eşit. tostring yazmazsak hata verir çümkü object ten int e dönüşüm olmaz önce string e çevrilir sonra int e çevrilir.
+            {
+                    <a href="/Home/List/@item.Id" class="list-group-item active">
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        @item.Name
+                    </a>
+            }
+            else
+            {
+                    <a href="/Home/List/@item.Id" class="list-group-item">
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        @item.Name
+                    </a>
+            }
+        }
+        else
+        {
+                <a href="/Home/List/@item.Id" class="list-group-item">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    @item.Name
+                </a>
+        }
+
+
+    }
+
+
+</ul>

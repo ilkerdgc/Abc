@@ -1,0 +1,17 @@
+﻿@model Abc.MvcWebUI.Models.Cart
+
+<style>
+    #cart{
+        color:white;
+        text-decoration:none
+    }
+</style>
+
+<ul class="navbar-nav my-2 my-lg-0">
+    <li class="nav-item">
+        <a id="cart" href="/Cart/Index">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            (@Model.CartLines.Count)
+        </a>
+    </li>
+</ul>
